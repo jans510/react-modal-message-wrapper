@@ -1,29 +1,29 @@
 {
   "name": "react-modal-message-wrapper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A thin wrapper around rect-bootstraps modal message",
   "main": "dist/react-modal-message-wrapper.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register test/*.test.js",
-    "lint": "eslint src/react-automatic-width.jsx",
+    "test": "echo work in progress...",
+    "lint": "eslint src/modal.jsx",
     "build": "webpack",
     "test-coverage": "babel-node ./node_modules/.bin/babel-istanbul cover _mocha -- --compilers js:babel-register test/*.test.js && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.bus.zalan.do:phrasers/reactjs-shared-components.git"
+    "url": "git+https://github.com/zalando/reactjs-modal-message-wrapper.git"
   },
   "keywords": [
     "react",
     "react-bootstrap",
-    "modal-message"
+    "modal"
   ],
   "author": "Jan Stroppel <jan.stroppel@zalando.de>",
   "license": "MIT",
   "bugs": {
-    "url": "to be entered"
+    "url": "https://github.com/zalando/reactjs-modal-message-wrapper/issues"
   },
-  "homepage": "to be entered",
+  "homepage": "https://github.com/zalando/reactjs-modal-message-wrapper",
   "babel": {
     "presets": [
       "es2015",

@@ -7,10 +7,19 @@ module.exports = {
     ],
     output: {
         path: __dirname + '/dist/',
-        filename: 'react-modal-message-wrapper.js',
-        library: 'react-modal-message-wrapper.js',
+        filename: 'reactjs-modal-message-wrapper.js',
+        library: 'reactjs-modal-message-wrapper.js',
         libraryTarget: 'umd'
     },
+    plugins: [
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.DefinePlugin({
+            "process.env": {
+                NODE_ENV: JSON.stringify("production")
+            }
+        })
+    ],
     resolve: {
         extensions: ['', '.js', 'jsx']
     },
