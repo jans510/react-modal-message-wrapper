@@ -1,5 +1,7 @@
 # reactjs-modal-message-wrapper
 
+This component is under development, so please don't use it until version 0.2.0!!
+
 A thin wrapper around react-bootstraps modal to create modal messages shown to the user.
  
 # Installation & Usage
@@ -27,7 +29,6 @@ class App extends Component {
         let displayMessage = (modalMessage) ? <ModalMessage key='modal-message' message={modalMessage} 
                                             primaryButton='OK' primaryButtonClicked={actions.resetMessage}/>
                                        : null;
-
         return (
             <div>
                {displayMessage}
@@ -38,4 +39,3 @@ class App extends Component {
 }
  
 ```
-
