@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Modal } from 'react-bootstrap';
 
 import '../asset/less/modal.less';
@@ -6,13 +6,12 @@ import '../asset/less/modal.less';
 /**
  * A modal displaying messages.
  */
-class ModalMessage extends React.Component {
+class ModalMessage extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            showModal: true,
-            message: props.message
+            showModal: true
         };
         this.close = this.close.bind(this);
     }
@@ -34,9 +33,9 @@ class ModalMessage extends React.Component {
             <div>
                 <Modal show={this.state.showModal}>
                     <Modal.Header>
-                        <Modal.Title>{this.state.message.title}</Modal.Title>
+                        <Modal.Title>{this.props.message.title}</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>{this.state.message.message}</Modal.Body>
+                    <Modal.Body>{this.props.message.message}</Modal.Body>
                     <Modal.Footer>
                         <button className='btn btn-primary'
                                 onClick={this.props.primaryButtonClicked}>{this.props.primaryButton}</button>
