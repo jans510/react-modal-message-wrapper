@@ -39,3 +39,20 @@ class App extends Component {
 }
  
 ```
+
+The component accepts the following parameters:
+
+* **message**: An object with the following properties:
+
+```javascript
+
+{
+    title: 'The title of the message',
+    message: 'The message in detail'
+}
+
+```
+
+* **primaryButtonClicked**: A function that is triggered on pressing the standard button. It is recommended to trigger the call of a `resetMessage` action, which should set the message object to null.
+* **secondaryButtonClicked**: A function that is triggered when the secondary button is clicked, if this property is not used, no secondary button will be rendered.
+* **primaryButton**: A string representing the text of the primary button.
