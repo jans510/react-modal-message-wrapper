@@ -1,4 +1,4 @@
-# reactjs-modal-message-wrapper
+# react-modal-message-wrapper
 
 This component is under development, so please don't use it until version 0.2.0!!
 
@@ -8,7 +8,7 @@ A thin wrapper around react-bootstraps modal to create modal messages shown to t
  
 You can install it with:
  
-     npm install --save-dev zalando/reactjs-modal-message-wrapper
+     npm install --save-dev zalando/react-modal-message-wrapper
 
 If you want to install a specific version, add the tag (e.g. #0.1.0) to the command
 
@@ -17,7 +17,7 @@ After this use the provided component:
 ```javascript
 
 import React, { Component } from 'react';
-import ModalMessage from 'reactjs-modal-message-wrapper';
+import ModalMessage from 'react-modal-message-wrapper';
 
 class App extends Component {
     constructor(props) {

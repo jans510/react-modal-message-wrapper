@@ -7,8 +7,8 @@ module.exports = {
     ],
     output: {
         path: __dirname + '/dist/',
-        filename: 'reactjs-modal-message-wrapper.js',
-        library: 'reactjs-modal-message-wrapper.js',
+        filename: 'react-modal-message-wrapper.js',
+        library: 'react-modal-message-wrapper.js',
         libraryTarget: 'umd'
     },
     plugins: [
