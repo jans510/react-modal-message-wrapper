@@ -1,6 +1,6 @@
 {
   "name": "react-modal-message-wrapper",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A thin wrapper around rect-bootstraps modal message",
   "main": "dist/react-modal-message-wrapper.js",
   "scripts": {
