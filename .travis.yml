@@ -1,6 +1,5 @@
 language: node_js
 node_js:
-  - '0.12'
   - '4.2'
   - '4.4'
   - '5.4'
@@ -9,3 +8,5 @@ notifications:
 script:
   - npm test
   - npm run build
+after_script:
+  - npm run test-coverage

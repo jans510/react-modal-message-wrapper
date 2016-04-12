@@ -35,8 +35,7 @@ module.exports = {
             { test:/\.jsx?$/, exclude: /node_modules/, loader: 'eslint' }
         ],
         loaders: [
-            { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel' },
-            {test: /\.less$/, exclude: /node_modules/, loaders: ['style', 'css', 'less']},
+            { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel' }
         ]
     }
 };

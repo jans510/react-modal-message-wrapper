@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Modal } from 'react-bootstrap';
 
-import '../asset/less/modal.less';
-
 /**
  * A modal displaying messages.
  */
