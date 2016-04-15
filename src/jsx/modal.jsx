@@ -11,25 +11,36 @@ class ModalMessage extends Component {
         this.state = {
             showModal: true
         };
-        this.close = this.close.bind(this);
+        this.closeModal = this.closeModal.bind(this);
     }
 
     /**
-     * Closes the modal and performs the action for pressing the cancel button.
+     * Handles key events. If return is pressed, the modal will close, performing the primary function. If escape is
+     * pressed, the secondary function is performed if provided, else the primary function
+     *
+     * @param event
      */
-    close() {
-        this.props.secondaryButtonClicked();
-        this.setState({
-            showModal: false
-        });
+    closeModal(event) {
+        let KEYCODE_ENTER = 13,
+            KEYCODE_ESC = 27;
+
+        switch (event.which) {
+            case KEYCODE_ENTER:
+                this.props.primaryButtonClicked();
+                break;
+            case KEYCODE_ESC:
+                (this.props.secondaryButtonClicked) ? this.props.secondaryButtonClicked() : this.props.primaryButtonClicked();
+                break;
+        }
     }
 
     render() {
         const cancelButton = (this.props.secondaryButtonClicked) ?
-            <button className='btn btn-default' onClick={this.close}>Cancel</button> : null;
+            <button className='btn btn-default'
+                    onClick={this.props.secondaryButtonClicked}>Cancel</button> : null;
         return (
             <div>
-                <Modal show={this.state.showModal}>
+                <Modal onKeyUp={this.closeModal} show={this.state.showModal}>
                     <Modal.Header>
                         <Modal.Title>{this.props.message.title}</Modal.Title>
                     </Modal.Header>
