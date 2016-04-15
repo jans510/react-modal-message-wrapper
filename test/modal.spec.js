@@ -68,5 +68,27 @@ describe('ModalMessage', function() {
         let cancelButton = document.getElementsByTagName('button')[1];
         cancelButton.click();
         expect(props.secondaryButtonClicked.calls.length).toBe(1);
+    });
+
+    it('should trigger the primary function on pressing enter', function() {
+        const { props } = setup(['primaryButtonClicked']);
+        let event = document.createEvent('HTMLEvents');
+        event.initEvent('keyup', true, true);
+        event.keyCode = 13;
+        let modal = document.getElementsByClassName('modal-content')[0];
+        modal.dispatchEvent(event);
+        expect(props.primaryButtonClicked.calls.length).toBe(1);
+
+    });
+
+    it('should trigger the secondary function on pressing escape', function() {
+        const { props } = setup(['primaryButtonClicked', 'secondaryButtonClicked']);
+        let event = document.createEvent('HTMLEvents');
+        event.initEvent('keyup', true, true);
+        event.keyCode = 27;
+        let modal = document.getElementsByClassName('modal-content')[0];
+        modal.dispatchEvent(event);
+        expect(props.secondaryButtonClicked.calls.length).toBe(1);
+
     })
 });
