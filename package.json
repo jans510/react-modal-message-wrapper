@@ -1,7 +1,7 @@
 {
   "name": "react-modal-message-wrapper",
   "version": "0.3.2",
-  "description": "A thin wrapper around rect-bootstraps modal message",
+  "description": "A thin wrapper around react-bootstraps modal message",
   "main": "dist/react-modal-message-wrapper.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register --recursive --require test/setup.js",
