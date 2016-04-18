@@ -4,6 +4,15 @@
 
 A thin wrapper around react-bootstraps modal to create modal messages shown to the user.
  
+# Prerequisites 
+
+This module needs the following modules installed in your project:
+
+* **react**
+* **react-bootstrap**
+
+You can install them via `npm install --save react react-bootstrap`
+
 # Installation & Usage
  
 You can install it with:
