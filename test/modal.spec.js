@@ -41,7 +41,6 @@ function setup(fnNames) {
  * @param keycode The keycode of the pressed key
  */
 function triggerKeyUpEvent(keycode) {
-
     let event = document.createEvent('HTMLEvents');
     event.initEvent('keyup', true, true);
     event.keyCode = keycode;
