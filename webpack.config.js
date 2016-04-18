@@ -28,7 +28,7 @@ module.exports = {
     },
     externals: {
         react: 'react',
-        'react-dom': 'react-dom'
+        'react-bootstrap': 'react-bootstrap'
     },
     module: {
         preLoaders: [
