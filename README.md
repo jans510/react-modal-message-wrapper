@@ -1,6 +1,7 @@
 # react-modal-message-wrapper
 
 [![Build Status](https://travis-ci.org/zalando/react-modal-message-wrapper.svg?branch=master)](https://travis-ci.org/zalando/react-modal-message-wrapper) [![Coverage Status](https://coveralls.io/repos/github/zalando/react-modal-message-wrapper/badge.svg?branch=master)](https://coveralls.io/github/zalando/react-modal-message-wrapper?branch=master)
+[![Dependencies](https://david-dm.org/zalando/zappr.svg)](https://david-dm.org/zalando/react-modal-message-wrapper)
 
 A thin wrapper around react-bootstraps modal to create modal messages shown to the user.
  
