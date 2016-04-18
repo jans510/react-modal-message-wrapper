@@ -18,9 +18,7 @@ You can install them via `npm install --save react react-bootstrap`
  
 You can install it with:
  
-     npm install --save-dev zalando/react-modal-message-wrapper
-
-If you want to install a specific version, add the tag (e.g. #0.2.0) to the command
+     npm install --save-dev react-modal-message-wrapper
 
 After this use the provided component:
 
