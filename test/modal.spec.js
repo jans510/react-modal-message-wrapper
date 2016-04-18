@@ -35,6 +35,19 @@ function setup(fnNames) {
     };
 }
 
+/**
+ * Triggers a keyup event for a specific keycode.
+ *
+ * @param keycode The keycode of the pressed key
+ */
+function triggerKeyUpEvent(keycode) {
+    let event = document.createEvent('HTMLEvents');
+    event.initEvent('keyup', true, true);
+    event.keyCode = keycode;
+    let modal = document.getElementsByClassName('modal-content')[0];
+    modal.dispatchEvent(event);
+}
+
 describe('ModalMessage', function() {
 
     afterEach(() => {
@@ -67,6 +80,18 @@ describe('ModalMessage', function() {
         const { props } = setup(['primaryButtonClicked', 'secondaryButtonClicked']);
         let cancelButton = document.getElementsByTagName('button')[1];
         cancelButton.click();
+        expect(props.secondaryButtonClicked.calls.length).toBe(1);
+    });
+
+    it('should trigger the primary function on pressing enter', function() {
+        const { props } = setup(['primaryButtonClicked']);
+        triggerKeyUpEvent(13);
+        expect(props.primaryButtonClicked.calls.length).toBe(1);
+    });
+
+    it('should trigger the secondary function on pressing escape', function() {
+        const { props } = setup(['primaryButtonClicked', 'secondaryButtonClicked']);
+        triggerKeyUpEvent(27);
         expect(props.secondaryButtonClicked.calls.length).toBe(1);
     })
 });
