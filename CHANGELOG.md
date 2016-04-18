@@ -1,0 +1,1 @@
+See [releases](https://github.com/zalando/react-modal-message-wrapper/releases)
