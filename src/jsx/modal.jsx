@@ -9,20 +9,22 @@ class ModalMessage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showModal: true
+            show: true
         };
-        this.closeModal = this.closeModal.bind(this);
+        this.close = this.close.bind(this);
     }
 
     /**
-     * Handles key events. If return is pressed, the modal will close, performing the primary function. If escape is
-     * pressed, the secondary function is performed if provided, else the primary function
+     * Handles key events.
      *
-     * @param event
+     * If return is pressed, the modal will close, performing the primary function. If escape is
+     * pressed, the secondary function is performed if provided, else the primary function.
+     *
+     * @param event The keyup event
      */
-    closeModal(event) {
-        let KEYCODE_ENTER = 13,
-            KEYCODE_ESC = 27;
+    close(event) {
+        const KEYCODE_ENTER = 13;
+        const KEYCODE_ESC = 27;
 
         switch (event.which) {
             case KEYCODE_ENTER:
@@ -40,7 +42,7 @@ class ModalMessage extends Component {
                     onClick={this.props.secondaryButtonClicked}>Cancel</button> : null;
         return (
             <div>
-                <Modal onKeyUp={this.closeModal} show={this.state.showModal}>
+                <Modal onKeyUp={this.close} show={this.state.show}>
                     <Modal.Header>
                         <Modal.Title>{this.props.message.title}</Modal.Title>
                     </Modal.Header>
