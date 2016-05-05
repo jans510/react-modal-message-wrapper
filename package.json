@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zalando/react-modal-message-wrapper.git"
+    "url": "git+https://github.com/jans510/react-modal-message-wrapper.git"
   },
   "keywords": [
     "react",
@@ -21,9 +21,9 @@
   "author": "Jan Stroppel <jan.stroppel@zalando.de>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zalando/react-modal-message-wrapper/issues"
+    "url": "https://github.com/jans510/react-modal-message-wrapper/issues"
   },
-  "homepage": "https://github.com/zalando/react-modal-message-wrapper",
+  "homepage": "https://github.com/jans510/react-modal-message-wrapper",
   "babel": {
     "presets": [
       "es2015",
