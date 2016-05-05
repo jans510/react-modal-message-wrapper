@@ -1,7 +1,7 @@
 # react-modal-message-wrapper
 
-[![Build Status](https://travis-ci.org/zalando/react-modal-message-wrapper.svg?branch=master)](https://travis-ci.org/zalando/react-modal-message-wrapper) [![Coverage Status](https://coveralls.io/repos/github/zalando/react-modal-message-wrapper/badge.svg?branch=master)](https://coveralls.io/github/zalando/react-modal-message-wrapper?branch=master)
-[![Dependencies](https://david-dm.org/zalando/zappr.svg)](https://david-dm.org/zalando/react-modal-message-wrapper)
+[![Build Status](https://travis-ci.org/jans510/react-modal-message-wrapper.svg?branch=master)](https://travis-ci.org/jans510/react-modal-message-wrapper) [![Coverage Status](https://coveralls.io/repos/github/jans510/react-modal-message-wrapper/badge.svg?branch=master)](https://coveralls.io/github/jans510/react-modal-message-wrapper?branch=master)
+[![Dependencies](https://david-dm.org/jans510/zappr.svg)](https://david-dm.org/jans510/react-modal-message-wrapper)
 
 A thin wrapper around [react-bootstraps](http://react-bootstrap.github.io/) modal to create modal messages shown to the user. This module reduces the boilerplate needed for creating messages. As it depends on react-booststrap, it is only recommended if you already use react-bootstrap in your project.
  
@@ -67,7 +67,7 @@ The component accepts the following parameters:
 
 # License
 
-The MIT License (MIT) Copyright © [2016] Zalando SE, https://tech.zalando.com
+The MIT License (MIT) Copyright © [2016]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
