@@ -22,7 +22,7 @@ function setup(fnNames) {
         {
             message: {
                 title: 'Caution:',
-                message: 'This is only a test'
+                detail: 'This is only a test'
             }
         }
     );
@@ -93,5 +93,17 @@ describe('ModalMessage', function() {
         const { props } = setup(['primaryButtonClicked', 'secondaryButtonClicked']);
         triggerKeyUpEvent(27);
         expect(props.secondaryButtonClicked.calls.length).toBe(1);
+    });
+
+    it('should render the detail message', function() {
+        setup(['primaryButtonClicked']);
+        let detailField = document.getElementById('message-detail');
+        expect(detailField.innerHTML).toBe('This is only a test');
+    });
+
+    it('should render the title of the message', function() {
+        setup(['primaryButtonClicked']);
+        let detailField = document.getElementById('message-title');
+        expect(detailField.innerHTML).toBe('Caution:');
     })
 });
