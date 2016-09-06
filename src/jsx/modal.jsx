@@ -46,7 +46,7 @@ class ModalMessage extends Component {
                     <Modal.Header>
                         <Modal.Title>{this.props.message.title}</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>{this.props.message.message}</Modal.Body>
+                    <Modal.Body>{this.props.message.detail}</Modal.Body>
                     <Modal.Footer>
                         <button className='btn btn-primary'
                                 onClick={this.props.primaryButtonClicked}>{this.props.primaryButton}</button>

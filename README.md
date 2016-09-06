@@ -56,7 +56,7 @@ The component accepts the following parameters:
 
 {
     title: 'The title of the message',
-    message: 'The message in detail'
+    detail: 'The message in detail'
 }
 
 ```
