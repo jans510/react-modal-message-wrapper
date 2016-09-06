@@ -44,9 +44,9 @@ class ModalMessage extends Component {
             <div>
                 <Modal onKeyUp={this.close} show={this.state.show}>
                     <Modal.Header>
-                        <Modal.Title>{this.props.message.title}</Modal.Title>
+                        <Modal.Title id='message-title'>{this.props.message.title}</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>{this.props.message.detail}</Modal.Body>
+                    <Modal.Body id='message-detail'>{this.props.message.detail}</Modal.Body>
                     <Modal.Footer>
                         <button className='btn btn-primary'
                                 onClick={this.props.primaryButtonClicked}>{this.props.primaryButton}</button>
