@@ -6,19 +6,15 @@ import ReactDom, { findDOMNode } from 'react-dom';
 
 import ModalMessage from '../src/jsx/modal';
 
-function setupProps(fnNames) {
-    let props = {};
+function setupProps(fnNames, variables) {
+    let props = variables;
     fnNames.forEach(property => props[property] = expect.createSpy()); // eslint-disable-line no-return-assign
     return props;
 }
 
-function setup(fnNames) {
-
+function setup(fnNames, variables = {}) {
     let props = Object.assign({},
-        setupProps(fnNames),
-        {
-            primaryButton: 'OK'
-        },
+        setupProps(fnNames, variables),
         {
             message: {
                 title: 'Caution:',
@@ -56,17 +52,26 @@ describe('ModalMessage', function() {
     });
 
     it('should render only the primary button if secondaryButtonClicked is omitted', function() {
-        setup(['primaryButtonClicked']);
+        setup(['primaryButtonClicked'], {primaryButton: 'Is OK'});
         let buttons = document.getElementsByTagName('button');
         expect(buttons.length).toBe(1);
-        expect(buttons[0]).innerHTML = 'OK';
+        expect(buttons[0].innerHTML).toBe('Is OK');
     });
 
     it('should render both buttons if secondaryButtonClicked is set', function() {
+        setup(['primaryButtonClicked', 'secondaryButtonClicked'], {primaryButton: 'Is OK', secondaryButton: 'Not OK'});
+        let buttons = document.getElementsByTagName('button');
+        expect(buttons.length).toBe(2);
+        expect(buttons[0].innerHTML).toBe('Is OK');
+        expect(buttons[1].innerHTML).toBe('Not OK');
+    });
+
+    it('should render both buttons with default names', function() {
         setup(['primaryButtonClicked', 'secondaryButtonClicked']);
         let buttons = document.getElementsByTagName('button');
         expect(buttons.length).toBe(2);
-        expect(buttons[1]).innerHTML = 'Cancel';
+        expect(buttons[0].innerHTML).toBe('OK');
+        expect(buttons[1].innerHTML).toBe('Cancel');
     });
 
     it('should trigger the primary button function on pressing the button', function() {

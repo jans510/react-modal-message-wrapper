@@ -39,7 +39,7 @@ class ModalMessage extends Component {
     render() {
         const cancelButton = (this.props.secondaryButtonClicked) ?
             <button className='btn btn-default'
-                    onClick={this.props.secondaryButtonClicked}>Cancel</button> : null;
+                    onClick={this.props.secondaryButtonClicked}>{this.props.secondaryButton || 'Cancel'}</button> : null;
         return (
             <div>
                 <Modal onKeyUp={this.close} show={this.state.show}>
@@ -49,7 +49,7 @@ class ModalMessage extends Component {
                     <Modal.Body id='message-detail'>{this.props.message.detail}</Modal.Body>
                     <Modal.Footer>
                         <button className='btn btn-primary'
-                                onClick={this.props.primaryButtonClicked}>{this.props.primaryButton}</button>
+                                onClick={this.props.primaryButtonClicked}>{this.props.primaryButton || 'OK'}</button>
                         {cancelButton}
                     </Modal.Footer>
                 </Modal>
@@ -62,8 +62,9 @@ class ModalMessage extends Component {
 ModalMessage.displayName = 'ModalMessage';
 ModalMessage.propTypes = {
     message: React.PropTypes.object.isRequired,
-    primaryButton: React.PropTypes.string.isRequired,
+    primaryButton: React.PropTypes.string,
     primaryButtonClicked: React.PropTypes.func.isRequired,
+    secondaryButton: React.PropTypes.func,
     secondaryButtonClicked: React.PropTypes.func
 };
 
