@@ -17,7 +17,8 @@ function setup(fnNames) {
     let props = Object.assign({},
         setupProps(fnNames),
         {
-            primaryButton: 'OK'
+            primaryButton: 'OK',
+            secondaryButton: 'Not OK'
         },
         {
             message: {
@@ -66,7 +67,7 @@ describe('ModalMessage', function() {
         setup(['primaryButtonClicked', 'secondaryButtonClicked']);
         let buttons = document.getElementsByTagName('button');
         expect(buttons.length).toBe(2);
-        expect(buttons[1]).innerHTML = 'Cancel';
+        expect(buttons[1]).innerHTML = 'Not OK';
     });
 
     it('should trigger the primary button function on pressing the button', function() {
