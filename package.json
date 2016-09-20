@@ -54,7 +54,7 @@
     "react": "^15.1.0",
     "react-addons-test-utils": "^15.1.0",
     "react-bootstrap": "^0.30.0",
-    "react-dom": "^15.1.0",
+    "react-dom": "^15.3.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.0"
   }
