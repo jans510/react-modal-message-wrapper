@@ -64,7 +64,7 @@ ModalMessage.propTypes = {
     message: React.PropTypes.object.isRequired,
     primaryButton: React.PropTypes.string,
     primaryButtonClicked: React.PropTypes.func.isRequired,
-    secondaryButton: React.PropTypes.func,
+    secondaryButton: React.PropTypes.string,
     secondaryButtonClicked: React.PropTypes.func
 };
 
