@@ -1,7 +1,6 @@
 # react-modal-message-wrapper
 
 [![Build Status](https://travis-ci.org/jans510/react-modal-message-wrapper.svg?branch=master)](https://travis-ci.org/jans510/react-modal-message-wrapper) [![Coverage Status](https://coveralls.io/repos/github/jans510/react-modal-message-wrapper/badge.svg?branch=master)](https://coveralls.io/github/jans510/react-modal-message-wrapper?branch=master)
-[![devDependency Status](https://david-dm.org/jans510/react-modal-message-wrapper/dev-status.svg)](https://david-dm.org/jans510/react-modal-message-wrapper#info=devDependencies)
 
 A thin wrapper around [react-bootstraps](http://react-bootstrap.github.io/) modal to create modal messages shown to the user. This module reduces the boilerplate needed for creating messages. As it depends on react-booststrap, it is only recommended if you already use react-bootstrap in your project.
  
